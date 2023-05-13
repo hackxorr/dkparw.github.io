@@ -8,8 +8,9 @@
         <link rel="icon" href="#">
     </head>
     <body>
-        <?php 
-        echo "Hola Mundo en php";
+        <?php
+        $ty=2;
+        echo "[$ty] Hola Mundo en php";
         ?>
     </body>
 </html>
