@@ -10,7 +10,7 @@
     <body>
         <?php
         $ty=2;
-        echo "[$ty] Hola Mundo en php";
+        echo "[$ty] Hola Mundo en php1";
         ?>
     </body>
 </html>
