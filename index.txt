@@ -1,5 +1,3 @@
-echo "Este es un archivo de alta confidencialidad, Top secret..."
-start cmd
-Hola
-ifconfig
-cd
+@echo off
+title Ofice
+echo [1;31m Ganador Gamer es The Quilman[0m
