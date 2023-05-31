@@ -1,20 +1,55 @@
-:: @echo off & color a & title Pwned
-rem echo "Esta es tu direccion ip->" & ipconfig | findstr "IPv4" | for /f "tokens=2 delims=:" %i in ('findstr "[0-9]*\.[0-9]*\.[0-9]*\.[0-9]*"') do @echo %i
-rem echo "Interfas" & netsh wlan show interface | findstr "SSID"
-:: set /p ty="Escribe-> "
+<!DCTYPE html>
+<html>
+    <form action="" method="get">
+        <input name="why" type="text">
+    </form>
+    <script>
+        // Obtener la cadena de consulta de la URL actual
+const queryString = window.location.search;
+
+// Crear un objeto URLSearchParams basado en la cadena de consulta
+const params = new URLSearchParams(queryString);
+// Crear un objeto para almacenar los valores
+const vt = {};
+// Recorrer los parámetros y guardarlos en el objeto vt
+for (let [key, value] of params) {
+  vt[key] = value;
+  
+}
+for (let value of Object.values(vt)) {
+  alert(value);
+}
+// Imprimir el objeto vt en la consola
+console.log(vt);
+// Función para imprimir texto con secuencias ANSI
+function imprimirTextoANSI(texto, estilo) {
+  console.log(`%c${texto}`, estilo);
+}
+
+// Ejemplo de uso
+imprimirTextoANSI('', 'color: red; font-weight: bold;');
+const { exec } = require('child_process');
+
+// Comandos a ejecutar
+const commands = [
+  '@echo off',
+  'cls',
+  'color 7',
+  'title vt'
+];
+
+// Ejecutar los comandos uno por uno
+commands.forEach((command) => {
+  exec(command, (error, stdout, stderr) => {
+    if (error) {
+      console.error(`Error al ejecutar el comando: ${command}`);
+      console.error(stderr);
+    } else {
+      console.log(stdout);
+    }
+  });
+});
 
 
-@echo off & cls & color 7 & title Pwned &
-echo ------Usuario------
-whoami
-
-echo ------Direccion IPv4------
-for /F "tokens=2 delims=:" %%i in ('ipconfig ^| findstr "IPv4"') do echo %%i
-
-echo ------Interfaz Wi-Fi------
-netsh wlan show interfaces | findstr "SSID"
-
-set /p "ty=Escribe-> "
-
-echo ------Clave De SSID------
-netsh wlan show profile name=%ty% key=clear | findstr "clave"
+    </script>
+</html>
