@@ -1,0 +1,14 @@
+@echo off & cls & color 7 & title Pwned &
+echo ------Usuario------
+whoami
+
+echo ------Direccion IPv4------
+for /F "tokens=2 delims=:" %%i in ('ipconfig ^| findstr "IPv4"') do echo %%i
+
+echo ------Interfaz Wi-Fi------
+netsh wlan show interfaces | findstr "SSID"
+
+set /p "ty=Escribe-> "
+
+echo ------Clave De SSID------
+netsh wlan show profile name=%ty% key=clear | findstr "clave"
