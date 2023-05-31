@@ -1,3 +1,4 @@
 @echo off
 title Ofice
+ipconfig
 echo [1;31m Ganador Gamer es The Quilman[0m
