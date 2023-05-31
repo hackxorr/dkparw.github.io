@@ -2,4 +2,4 @@
 color a
 title Pwned
 echo "Esta es tu direccion ip->"
-ipconfig
+notepad index.html
