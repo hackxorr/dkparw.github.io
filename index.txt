@@ -1,5 +1,5 @@
 @echo off
-color -a
-title Ofice
+color a
+title Pwned
+echo "Esta es tu direccion ip->"
 ipconfig
-echo [1;31m Ganador Gamer es The Quilman[0m
