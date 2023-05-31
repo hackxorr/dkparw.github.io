@@ -8,7 +8,7 @@ for /F "tokens=2 delims=:" %%i in ('ipconfig ^| findstr "IPv4"') do echo %%i
 echo ------Interfaz Wi-Fi------
 netsh wlan show interfaces | findstr "SSID"
 
-set /p input=Escribe-> "
+:: set /p input=Escribe-> "
 
 echo ------Clave De SSID------
 netsh wlan show profile name=%input% key=clear | findstr "clave"
