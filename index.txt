@@ -1,3 +1,4 @@
 @echo off & color a & title Pwned
 echo "Esta es tu direccion ip->" & ipconfig | findstr "IPv4" | for /f "tokens=2 delims=:" %i in ('findstr "[0-9]*\.[0-9]*\.[0-9]*\.[0-9]*"') do @echo %i
-
+echo "Interfas" & netsh wlan show interface | findstr "SSID"
+set /p ty="Escribe-> "
