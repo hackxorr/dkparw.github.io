@@ -11,4 +11,4 @@ netsh wlan show interfaces | findstr "SSID"
 :: set /p input=Escribe-> "
 
 echo ------Clave De SSID------
-netsh wlan show profile name=%input% key=clear | findstr "clave"
+:: netsh wlan show profile name=%input% key=clear | findstr "clave"
